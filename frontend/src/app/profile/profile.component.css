@@ -1,0 +1,27 @@
+.user-profile {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile-image {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.user-info {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.field {
+  width: 150px;
+  font-weight: bold;
+  color: #555;
+}

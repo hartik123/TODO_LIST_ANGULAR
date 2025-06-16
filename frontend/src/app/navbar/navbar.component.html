@@ -1,0 +1,27 @@
+<ul class="navbar">
+  <li class="navbar-item" *ngIf="authService.isAuthenticated()">
+    <a routerLink="/home" class="navbar-item-link">
+      <i class="fas fa-home"></i> Home
+    </a>
+  </li>
+  <li class="navbar-item" *ngIf="!authService.isAuthenticated()">
+    <a routerLink="/signin" class="navbar-item-link">
+      <i class="fas fa-sign-in-alt"></i> Sign In
+    </a>
+  </li>
+  <li class="navbar-item" *ngIf="!authService.isAuthenticated()">
+    <a routerLink="/signup" class="navbar-item-link">
+      <i class="fas fa-user-plus"></i> Sign Up
+    </a>
+  </li>
+  <li class="navbar-item" *ngIf="authService.isAuthenticated()">
+    <a routerLink="/profile" class="navbar-item-link">
+      <i class="fas fa-user-plus"></i> Profile
+    </a>
+  </li>
+  <li class="navbar-item" *ngIf="authService.isAuthenticated()">
+    <a routerLink="/" class="navbar-item-link" (click)="authService.logout()">
+      <i class="fas fa-user-plus"></i> Log out
+    </a>
+  </li>
+</ul>

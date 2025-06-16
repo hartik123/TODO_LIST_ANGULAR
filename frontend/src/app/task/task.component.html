@@ -1,0 +1,11 @@
+<div class="tasks-container">
+  <div class="task-item" *ngFor="let task of tasks; let i = index">
+    <span>
+      <p class="task-content">{{ i + 1 }}.</p>
+      <p class="task-content">{{ task.title }}</p>
+    </span>
+    <button class="delete-btn" (click)="deleteTask(task.id)">
+      <fa-icon [icon]="faTrash"></fa-icon> Delete 
+    </button>
+  </div>
+</div>
