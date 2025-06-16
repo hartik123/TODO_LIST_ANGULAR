@@ -1,59 +1,87 @@
-# Todolist
+# 📝 Todo List App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+A full-stack task management application that allows users to sign up, log in, and manage their daily tasks. Built using Angular.js for the frontend and Express.js for the backend, with secure authentication and MongoDB for data persistence.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🔧 Technologies Used
 
-```bash
-ng serve
-```
+### 🖥️ Frontend
+- **Framework:** Angular.js
+- **Language:** TypeScript
+- **Styling:** CSS, HTML
+- **Storage:** LocalStorage (session maintained for 1 hour)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 🛠️ Backend
+- **Runtime:** Node.js with Express.js
+- **Authentication:** JSON Web Tokens (JWT)
 
-## Code scaffolding
+### 🗄️ Database
+- **MongoDB Atlas** (Cloud)
+- **MongoDB Compass** (Local GUI for visualization)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 🧪 API Testing
+- **Postman**
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🌐 Web Pages
 
-```bash
-ng generate --help
-```
+### 1. Sign Up Page  
+<img width="1470" alt="Sign Up Page" src="https://github.com/user-attachments/assets/b8584ab5-b7be-4724-83bd-b51ee41c5711" />
 
-## Building
+### 2. Sign In Page  
+<img width="1470" alt="Sign In Page" src="https://github.com/user-attachments/assets/8523b0ee-2b89-4926-a5f0-345b5f8e2f45" />
 
-To build the project run:
+### 3. Profile Page  
+<img width="1470" alt="Profile Page" src="https://github.com/user-attachments/assets/555b6cd7-8454-44d8-a5d7-36c22c76fd1f" />
 
-```bash
-ng build
-```
+### 4. Home Page  
+<img width="1470" alt="Home Page" src="https://github.com/user-attachments/assets/4faf9d3a-1ac3-4248-8e46-c1dfb4cfce06" />
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### 5. Add Task  
+<img width="1470" alt="Add Task" src="https://github.com/user-attachments/assets/f2e0c242-dae2-4fb4-8458-cbe661595337" />
 
-## Running unit tests
+### 6. View Task  
+<img width="1470" alt="View Task" src="https://github.com/user-attachments/assets/bd507433-8786-40ac-b48b-6201d81072da" />
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### 7. Delete Task  
+<img width="1470" alt="Delete Task" src="https://github.com/user-attachments/assets/2155063c-961a-4b21-8d77-4b3780a8d67e" />
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 🚀 Features
+- User authentication with JWT and session expiration
+- CRUD operations for tasks
+- LocalStorage-based session management
+- Responsive Angular UI
+- RESTful API integration
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+## 🔌 API Endpoints
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### `/user/`
+| Method | Endpoint       | Description           |
+|--------|----------------|-----------------------|
+| POST   | `/register`    | Register a new user   |
+| POST   | `/login`       | Authenticate user and return JWT |
+| POST   | `/getprofile`  | Get user profile (JWT required) |
 
-## Additional Resources
+### `/todo/`
+| Method  | Endpoint     | Description                 |
+|---------|--------------|-----------------------------|
+| POST    | `/getAll`    | Retrieve all todos for a user |
+| POST    | `/`          | Create a new todo           |
+| DELETE  | `/`          | Delete a todo by ID (from request body or query) |
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> All `/todo/` routes are JWT-protected and require valid authentication headers.
+
+---
+
+## 📦 Setup Instructions
+
+1. **Clone the repository**  
+   ```bash
+   git clone git@github.com:your-username/todolist.git
+   cd todolist
