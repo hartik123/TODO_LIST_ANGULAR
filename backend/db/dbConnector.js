@@ -1,8 +1,6 @@
-// mongodb+srv://hartiktodolistapp:hartik123@cluster0.ewf0cut.mongodb.net/
-
-
+require('dotenv').config();
 const mongoose = require('mongoose');
-const dbURI = '***REMOVED***';
+const dbURI = process.env.MONGODB_URI;;
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
